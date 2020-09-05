@@ -1,0 +1,28 @@
+/* pages/type/type.wxss */
+page{
+  width: 750rpx;
+  background: url(https://www.zhaoyunuo.net/1.jpg) no-repeat;
+  background-size: 100% 100%;
+}
+.typebox{
+  display: flex;
+  width: 594rpx;
+  /* margin-top: 220rpx auto 0; */
+  position: relative;
+  top: 220rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.typeitem{
+  width: 276rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-bottom: 30rpx;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  text-align: center;
+  color: #fff;
+  background-color: orangered;
+}

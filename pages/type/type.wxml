@@ -1,0 +1,12 @@
+<!--pages/type/type.wxml-->
+<view>
+  <view class="typebox">
+    <view class="typeitem" 
+    wx:for="{{ storylist }}" 
+    wx:key="index"
+    bindtap="toList"
+    data-classify="{{item.classify}}"
+    data-classifyid="{{item.classifyId}}"
+    >{{item.classify}}</view>
+  </view>
+</view>

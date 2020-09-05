@@ -1,0 +1,29 @@
+<!--pages/list/list.wxml-->
+<!-- 显示个人信息 -->
+<view class="top">
+  <!-- 已登录 -->
+  <view class="userinfo" wx:if="{{ isLogin }}">
+    <image style="" src="{{ userInfo.avatarUrl }}"></image>
+    <text>欢迎:{{ userInfo.nickName }}</text>
+  </view>
+  <!-- 未登录 -->
+  <view class="userinfo" wx:if="{{ !isLogin }}">
+    <text>游客</text>
+  </view>
+</view>
+<!-- 故事列表 -->
+<view class="mt50">
+  <view class="weui-cells">
+    <block wx:for="{{ contentlist }}" wx:key="index">
+        <mp-slideview buttons="{{slideButtons}}" 
+                      bindbuttontap="todetail" 
+                      data-id="{{ item.id }}" 
+                      data-title="{{ item.title }}">
+            <mp-cell value="{{ item.title }}" footer="左划查看" 
+            bindbuttontap="todetail" 
+            data-id="{{ item.id }}" 
+            data-title="{{ item.title }}"></mp-cell>
+        </mp-slideview>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view  class="top">
+    <!-- 未登录 -->
+    <view wx:if="{{ !isLogin }}">
+      <image src="/icon/my.png"></image>
+      <button type="warn" size="mini" bindtap="toLogin">登录</button>
+    </view>
+    <!-- 已登录 -->
+    <view wx:if="{{ isLogin }}">
+        <image src="{{ userInfo.avatarUrl }}"></image>
+        <text>{{ userInfo.nickName }}</text>
+    </view>
+  </view>
+
+  <!-- 已登录足迹列表 -->
+  <view wx:if="{{  isLogin }}">
+    <view class="weui-cells"  style="margin-top:0px" wx:if="{{ storyArr.length }}">
+      <block wx:for="{{ storyArr }}" wx:key="index">
+          <mp-slideview buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" data-id="{{ item.id }}" data-title="{{ item.title }}">
+              <mp-cell value="{{ item.title }}" footer="左划查看"></mp-cell>
+          </mp-slideview>
+          <!-- 提示框 -->
+          <mp-dialog title="确认删除" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}" 
+          data-id="{{item.id}}">
+            <view>{{ item.title }}</view>
+          </mp-dialog>
+
+      </block>
+    </view>
+    <view wx:else style="text-align:center;margin-top:200px">
+      空空如也~~~
+    </view>
+  </view>
+
+  <view wx:if="{{ !isLogin }}" style="text-align:center;margin-top:200px">
+        还未登录！！！
+  </view>
+
+</view>
+

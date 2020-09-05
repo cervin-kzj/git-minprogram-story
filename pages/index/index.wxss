@@ -1,0 +1,22 @@
+/**index.wxss**/
+.banner{
+  position: relative;
+}
+.banner image{
+  width: 100%;
+  height: 100%;
+}
+swiper{
+  width: 750rpx;
+  height: 800rpx;
+}
+.adv{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+.welcome{
+  height: 200rpx;
+  line-height: 200rpx;
+  text-align: center;
+}

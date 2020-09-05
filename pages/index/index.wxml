@@ -1,0 +1,19 @@
+<!--index.wxml-->
+<view>
+  <!-- banner -->
+  <view class="banner">
+    <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{1000}}" bindchange="bannerchange">
+      <swiper-item wx:for="{{ bannerlist }}" wx:key="index">
+        <image src="{{ item }}"></image>
+      </swiper-item>
+    </swiper>
+    <view class="adv">
+    <text>{{seconds}}s</text>
+    <text bindtap="jumpAdv">跳过广告</text>
+    </view>
+  </view>
+  <!-- 欢迎 -->
+  <view class="welcome">
+    <text>欢迎来到童话故事</text>
+  </view>
+</view>

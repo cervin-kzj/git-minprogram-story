@@ -1,0 +1,11 @@
+/* pages/login/login.wxss */
+button{
+  width: 60%;
+  margin-top: 10px;
+}
+view{
+  margin-top: 300rpx;
+}
+page{
+  background-color: #ccc;
+}

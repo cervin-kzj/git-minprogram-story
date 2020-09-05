@@ -1,0 +1,6 @@
+<!--pages/login/login.wxml-->
+<view>
+    <button type="primary" open-type="getUserInfo" bindgetuserinfo="login">微信登陆</button>
+    <button type="warn">QQ登录</button>
+    <button>手机验证码登录</button>
+</view>
